@@ -10,7 +10,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
-@app.route('/app_07/')
+@app.route('/')
 def app_07():
     context = {'news':
         [
