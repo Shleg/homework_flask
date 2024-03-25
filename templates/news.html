@@ -23,15 +23,13 @@
             <tbody>
             {% for one_news in news %}
                 <tr>
-                    <th scope="row">1</th>
+                    <th scope="row">{{ loop.index }}</th>
                     <td>{{ one_news.title }}</td>
                     <td>{{ one_news.description }}</td>
                     <td>{{ one_news.date }}</td>
                     <td>{{ one_news.source }}</td>
                 </tr>
             {% endfor %}
-
-                <!-- Дополнительные строки -->
             </tbody>
         </table>
     </div>
