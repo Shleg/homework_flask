@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Интернет магазин{% endblock %}</title>
+    <!-- Подключение Bootstrap CSS из CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Дополнительные стили -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">Интернет-магазин</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cloth/">Одежда</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/shoes/">Обувь</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/jackets/">Куртки</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% block content %}
+        <h1> Категории </h1>
+        <div class="row">
+  <div class="col-sm-3 mb-3 mb-sm-0">
+    <div class="card">
+        <img src="static/img/cloth.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Одежда</h5>
+        <a href="/cloth/" class="btn btn-primary">Перейти</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+        <img src="static/img/shoes.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Обувь</h5>
+        <a href="/shoes/" class="btn btn-primary">Перейти</a>
+      </div>
+    </div>
+  </div>
+            <div class="col-sm-3">
+    <div class="card">
+        <img src="static/img/jackets.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Куртки</h5>
+        <a href="/jackets/" class="btn btn-primary">Перейти</a>
+      </div>
+    </div>
+  </div>
+</div>
+        {% endblock %}
+    </div>
+
+    <footer class="footer py-3 bg-light fixed-bottom">
+        <div class="container">
+            <span class="text-muted">© 2024 Интернет-магазин. Все права защищены.</span>
+        </div>
+    </footer>
+
+    <!-- Подключение Bootstrap JavaScript из CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
