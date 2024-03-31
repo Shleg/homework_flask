@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block page_title %}{{ title }}{% endblock %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+<h2>Произошла ошибка {{ error }}</h2>
+<p>{{ error_type }}</p>
+{% endblock %}
